@@ -18,6 +18,7 @@ libraryDependencies ++=
       "com.typesafe.akka"      %% "akka-actor"                     % akkaV,
       "io.spray"               %% "spray-json"                     % jsonV,
       "com.sksamuel.elastic4s" %% "elastic4s"                      % esV,
+      "ch.qos.logback"          % "logback-classic"                % "1.1.2",
       "com.github.dnvriend"    %% "akka-elasticsearch"             % "1.0.0-SNAPSHOT",
       "org.scalatest"          %% "scalatest"                      % "2.1.4" % "test"
     )
