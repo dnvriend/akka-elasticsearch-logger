@@ -64,7 +64,7 @@ class ElasticSearchAppender extends AppenderBase[ILoggingEvent] {
           "message" -> message
           )
       }
-    case None => println("No ElasticSearch, logging to STDOUT: " + message)
+    case None =>
   }
 
   override def append(event: ILoggingEvent): Unit = {
