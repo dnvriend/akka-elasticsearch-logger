@@ -9,7 +9,7 @@ import ch.qos.logback.classic.spi.ILoggingEvent
 import ch.qos.logback.core.AppenderBase
 import ch.qos.logback.core.encoder.Encoder
 import ch.qos.logback.core.status.ErrorStatus
-import com.dnvriend.elasticsearch.extension.ElasticSearch
+import com.github.dnvriend.elasticsearch.extension.ElasticSearch
 import com.sksamuel.elastic4s.ElasticDsl
 
 object ElasticSearchLogger extends ExtensionId[ElasticSearchLogger] with ExtensionIdProvider {

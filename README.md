@@ -51,5 +51,8 @@ Akka should be configured to add the ElasticSearchLogger extension in applicatio
     
       logging-filter = "akka.event.slf4j.Slf4jLoggingFilter"
     
-      extensions = ["com.github.dnvriend.elasticsearch.logger.ElasticSearchLogger"]
+      extensions = [
+        "com.github.dnvriend.elasticsearch.extension.ElasticSearch",
+        "com.github.dnvriend.elasticsearch.logger.ElasticSearchLogger"
+      ]
     }
