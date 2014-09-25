@@ -1,12 +1,16 @@
+import bintray.Plugin._
+
+seq(bintraySettings:_*)
+
 name := "akka-elasticsearch-logger"
 
 organization := "com.github.dnvriend"
 
-version := "1.0.0-SNAPSHOT"
+version := "1.0.0"
 
 scalaVersion := "2.11.2"
 
-resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
+resolvers += "dnvriend at bintray" at "http://dl.bintray.com/dnvriend/maven"
 
 libraryDependencies ++=
   {
@@ -19,7 +23,7 @@ libraryDependencies ++=
       "io.spray"               %% "spray-json"                     % jsonV,
       "com.sksamuel.elastic4s" %% "elastic4s"                      % esV,
       "ch.qos.logback"          % "logback-classic"                % "1.1.2",
-      "com.github.dnvriend"    %% "akka-elasticsearch"             % "1.0.0-SNAPSHOT",
+      "com.github.dnvriend"    %% "akka-elasticsearch"             % "1.0.0",
       "org.scalatest"          %% "scalatest"                      % "2.1.4" % "test"
     )
   }
@@ -30,6 +34,6 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 publishMavenStyle := true
 
-publishArtifact in Test := false
+licenses += ("Apache-2.0", url("http://opensource.org/licenses/apache2.0.php"))
 
-fork := true
+bintray.Keys.packageLabels in bintray.Keys.bintray := Seq("akka", "elasticsearch", "logback", "logging", "index", "indexing")

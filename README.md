@@ -1,6 +1,14 @@
 # akka-elasticsearch-logger
 An ElasticSearch Logger for Akka. It uses logback-classic as the back-end.
 
+# Dependency
+To include the akka-elasticsearch-logger extension to your project, add the following lines to your build.sbt:
+ 
+    resolvers += "dnvriend at bintray" at "http://dl.bintray.com/dnvriend/maven"
+    
+    libraryDependencies += "com.github.dnvriend" %% "akka-elasticsearch" % "1.0.0"
+    libraryDependencies += "com.github.dnvriend" %% "akka-elasticsearch-logger" % "1.0.0"
+
 # Usage
 
 ## Logger configuration
